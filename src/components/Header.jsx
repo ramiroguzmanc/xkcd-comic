@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import "../sass/header.scss";
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const handleDarkMode = () => setDarkMode(!darkMode);
 
   return (
-    <div>
-      <h1>XKXD Ramdom Comic</h1>
-      <button type="button" onClick={handleDarkMode}>
+    <div className="header">
+      <h1 className="header__title">XKXD Ramdom Comic</h1>
+      <button className="header__button" type="button" onClick={handleDarkMode}>
         {darkMode ? "Light Mode" : "Dark Mode"}
       </button>
     </div>

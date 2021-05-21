@@ -1,24 +1,34 @@
 import React, { useState, useEffect } from "react";
+import "../sass/comic.scss";
 
 const Comic = () => {
   const [Comic, setComic] = useState([]);
 
-  useEffect(() => randomComic, []);
+  useEffect(() => randomComic(), []);
 
-  const randomComic = () => {
-    var comicNumber = Math.round(Math.random() * (1466 - 1) + 1);
-    fetch(
-      `https://cors-anywhere.herokuapp.com/http://xkcd.com/${comicNumber}/info.0.json`
-    )
-      .then((Response) => Response.json())
-      .then((data) => setComic(data));
+  const randomComic = async () => {
+    var comicNumber = Math.round(Math.random() * (672 - 1) + 1);
+
+    try {
+      await fetch(`https://rickandmortyapi.com/api/character/${comicNumber}`)
+        .then((Response) => Response.json())
+        .then((data) => setComic(data));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
-    <div>
-      <h1>{Comic.title}</h1>
-      <img src={Comic.img} alt={Comic.alt} />
-      <button onClick={randomComic}>New Random Comic</button>
+    <div className="comicContainer">
+      <h1 className="comicContainer__tittle">{Comic.name}</h1>
+      <img
+        className="comicContainer__image"
+        src={Comic.image}
+        alt={Comic.name}
+      />
+      <button className="comicContainer__button" onClick={randomComic}>
+        New Random Comic
+      </button>
     </div>
   );
 };

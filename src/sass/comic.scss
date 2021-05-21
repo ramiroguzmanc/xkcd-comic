@@ -1,0 +1,15 @@
+.comicContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  &__button {
+    display: block;
+    width: 200px;
+    margin: 10px;
+  }
+  &__image {
+    width: 25%;
+    height: 25%;
+  }
+}
