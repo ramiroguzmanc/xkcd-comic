@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Comic from "./components/Comic";
+import Footer from "./components/footer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,6 +24,7 @@ function App() {
     <div className="gridContainer">
       <Header darkMode={darkMode} handleDarkMode={handleDarkMode} />
       <Comic />
+      <Footer />
     </div>
   );
 }
