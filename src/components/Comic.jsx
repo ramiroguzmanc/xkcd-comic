@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import Rating from "@material-ui/lab/Rating";
 import { Button, Typography, Box } from "@material-ui/core";
 import "../sass/comic.scss";
@@ -54,6 +55,19 @@ const Comic = () => {
       </Button>
     </div>
   );
+=======
+
+const Comic = () => {
+  const [Comic, setComic] = useState([]);
+  var a = 614;
+  useEffect(() => {
+    fetch(`https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json`)
+      .then((Response) => Response.json())
+      .then((data) => console.log(data));
+  }, []);
+
+  return <div></div>;
+>>>>>>> c7f9eda3cc8bbdca85b4ed33541855f3aea1cab8
 };
 
 export default Comic;
