@@ -3,6 +3,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 20px;
   border-bottom: 1px solid gray;
+  &__button {
+    display: block;
+    align-self: center;
+  }
 }

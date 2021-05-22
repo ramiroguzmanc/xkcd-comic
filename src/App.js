@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import "./sass/styles.scss";
 import Header from "./components/Header";
 import Comic from "./components/Comic";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleDarkMode = () => {
     const body = document.body.style;
 
     if (darkMode) {
-      body.backgroundColor = "white";
+      body.backgroundColor = "whitesmoke";
       body.color = "black";
     } else {
       body.backgroundColor = "#121212";
