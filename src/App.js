@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
-import Comic from "./components/Comic";
+import Character from "./components/Character";
 import Footer from "./components/footer";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="gridContainer">
       <Header darkMode={darkMode} handleDarkMode={handleDarkMode} />
-      <Comic />
+      <Character />
       <Footer />
     </div>
   );

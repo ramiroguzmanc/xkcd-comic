@@ -6,7 +6,7 @@ import DarkModeIcon from "@material-ui/icons/Brightness4";
 const Header = (props) => {
   return (
     <div className="header">
-      <h1 className="header__title">XKXD Ramdom Comic</h1>
+      <h1 className="header__title">🧪 Rick and Morty Ramdom Character 👨🏼‍🔬</h1>
 
       <Button
         className="header__button"
